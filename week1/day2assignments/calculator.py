@@ -7,7 +7,7 @@ def get_inputs():
   first_num = float(input("Enter first number: "))
   operator = input("Enter operation (+, -, *, /): ")
   second_num = float(input("Enter second number: "))
-  return first_num, operator, second_num
+  return first_num, operator.strip(), second_num
 
 def determine_operation(first_num, operator, second_num):
   if(operator == "+"):
