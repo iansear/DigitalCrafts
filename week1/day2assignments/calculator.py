@@ -12,11 +12,11 @@ def get_inputs():
 def determine_operation(first_num, operator, second_num):
   if(operator == "+"):
     return add_nums(first_num, second_num)
-  if(operator == "-"):
+  elif(operator == "-"):
     return subtract_nums(first_num, second_num)
-  if(operator == "*"):
+  elif(operator == "*"):
     return multiply_nums(first_num, second_num)
-  if(operator =="/"):
+  elif(operator =="/"):
     return divide_nums(first_num, second_num)
   else:
     return f"Invalid operator: {operator}"

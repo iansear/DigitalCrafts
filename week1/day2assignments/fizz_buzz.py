@@ -10,9 +10,9 @@ def get_input():
 def get_solution(number):
   if (number % 5 == 0) and (number % 3 == 0):
     return "Fizz Buzz"
-  if (number % 3 == 0):
+  elif (number % 3 == 0):
     return "Fizz"
-  if (number % 5 == 0):
+  elif (number % 5 == 0):
     return "Buzz"
 
 print(fizz_buzz())
