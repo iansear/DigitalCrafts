@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [ "$1" != "" ]; then
+if [ "$2" == "-cat" ]; then
+  cat $1
+fi
   repeat="y"
   while [ "$repeat" == "y" ]
     do
-    if [ "$2" == "-cat" ]; then
-      cat $1
-    fi
     python3 $1
     echo "Repeat test? (y/n):"
     read repeat
