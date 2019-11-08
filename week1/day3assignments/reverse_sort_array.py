@@ -11,5 +11,5 @@ def reverse_sort(array):
     del array[num_index]
   return reversed_array
 
-test_array = [44, 68, -2355532, -4356.345, 234, 4674356734564, 2, 8, 0]
+test_array = [44, 68, -2355532, -4356.345, 234, 464334564, 68, 2, 8, 0]
 print(reverse_sort(test_array))

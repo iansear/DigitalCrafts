@@ -14,7 +14,7 @@ def get_valid_temp():
   while is_good == False:
     user_input = input("Enter temp to convert. (eg. 32f or 0c): ")
     scale = user_input[-1:].lower()
-    if (scale == "c") or (scale.lower() == "f"):
+    if (scale == "c") or (scale == "f"):
       try:
         temp = float(user_input[:-1])
         is_good = True
