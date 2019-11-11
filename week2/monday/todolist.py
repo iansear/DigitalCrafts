@@ -25,12 +25,9 @@ def del_task():
 
 def view_tasks():
   print("Current tasks:")
-  it = 1
   for task in tasks:
-    keys = list(task.keys())
-    print(f"{it} - {task[keys[0]]} - {task[keys[1]]}")
-    print()
-    it += 1
+    index, title, priority = tasks.index(task), task["title"], task["priority"]
+    print(f"{index} - {title} - {priority}")
 
 tasks = []
 
