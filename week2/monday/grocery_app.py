@@ -4,6 +4,8 @@ def menu():
     print("1 - Add Store")
     print("2 - View Master List")
     print("3 - Add to Existing Store")
+    print("4 - Remove Item from Store")
+    print("5 - Remove Store")
     print("'q' to quit.")
     user_input = input("Enter: ")
     if user_input == "q":
@@ -14,6 +16,10 @@ def menu():
       view_list()
     elif user_input == "3":
       add_to_list()
+    elif user_input == "4":
+      remove_from_list()
+    elif user_input == "5":
+      remove_list()
 
 def add_list():
   title = input("Enter Store Name: ")
@@ -59,8 +65,20 @@ def view_list():
 
 def add_to_list():
   view_list()
-  user_input = int(input("Choose list to add: ")) - 1
+  user_input = int(input("Choose list to add to: ")) - 1
   add_items(user_input)
+
+def remove_from_list():
+  view_list()
+  index1 = int(input("Choose list to remove from: ")) - 1
+  index2 = int(input("Choose item to remove: ")) - 1
+  a_list = master_list[index1]
+  del a_list["items"][index2]
+
+def remove_list():
+  view_list()
+  index = int(input("Choose list to remove from: ")) - 1
+  del master_list[index]
 
 master_list = []
 menu()
