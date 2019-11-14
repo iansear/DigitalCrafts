@@ -66,10 +66,13 @@ class PoolHall():
 
   def log_session(self, table, time, cost):
     date = datetime.date.today().strftime('%m-%d-%Y')
-    with open(f'{date}.txt', 'a') as log:
-      log.write(f'Table: {table.table_number} \r')
-      log.write(f'Start Time: {table.start_time}\r')
-      log.write(f'End Time: {table.end_time}\r')
-      log.write(f'Duration: {time}\r')
-      log.write(f'Cost: ${cost}\r')
-      log.write('\r')
+    try:
+      with open(f'logs/{date}.txt', 'a') as log:
+        log.write(f'Table: {table.table_number} \r')
+        log.write(f'Start Time: {table.start_time}\r')
+        log.write(f'End Time: {table.end_time}\r')
+        log.write(f'Duration: {time}\r')
+        log.write(f'Cost: ${cost}\r')
+        log.write('\r')
+    except:
+      print('Error writing to file.')
