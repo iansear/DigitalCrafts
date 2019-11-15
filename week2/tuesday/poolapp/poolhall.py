@@ -1,9 +1,10 @@
 import datetime
 
 class PoolHall():
-  def __init__(self, tables, rate):
+  def __init__(self, tables, rate, seconds_offset):
     self.tables = tables
     self.rate = rate
+    self.seconds_offset = seconds_offset
 
   def get_tables(self, status):
     tables = [tb for tb in self.tables if tb.status == status]
@@ -12,6 +13,7 @@ class PoolHall():
   def validate_table(self, message, tables):
     table_numbers = [tb.table_number for tb in tables]
     while True:
+      print('')
       print(message)
       if len(table_numbers) == 0:
           print('No tables.')
@@ -24,12 +26,14 @@ class PoolHall():
           for table in tables:
             if table_number == table.table_number:
               return table
-        elif table_number in range(1,13):
+        elif table_number in range(1,len(self.tables) + 1):
           print(f'Table {table_number} is unavailable.')
         else:
           print('Invalid table, try again...')
       except ValueError:
         print('Not an integer, try again...')
+      except:
+        print('Unknown error...')
 
   def check_out_table(self):
     message = 'Tables Available:'
