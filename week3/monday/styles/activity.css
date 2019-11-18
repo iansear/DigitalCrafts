@@ -1,0 +1,10 @@
+body {
+  background-color: yellow;
+}
+#movie-list li {
+  background-color: green;
+}
+
+#tv-shows li {
+  color: blue;
+}

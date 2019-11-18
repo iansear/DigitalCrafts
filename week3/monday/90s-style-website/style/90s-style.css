@@ -1,0 +1,55 @@
+body {
+  color: #5fc368;
+  background-image: url("images/indexbackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  color: red;
+}
+#farscape {
+  background-image: url("images/farscape.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  color: white;
+}
+#farscape a {
+  color: white;
+}
+#red-dwarf {
+  background-image: url("images/red-dwarf.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  color: white;
+}
+#red-dwarf a {
+  color: white;
+}
+#stargate-sg1 {
+  background-image: url("images/stargate-sg1.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  color: white;
+}
+#stargate-sg1 a {
+  color: white;
+}
+#sliders {
+  background-image: url("images/sliders.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  color: white;
+}
+#sliders a {
+  color: white;
+}
+#lexx {
+  background-image: url("images/lexx.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  color: white;
+}
+#lexx a {
+  color: white;
+}
