@@ -1,0 +1,27 @@
+.topmenu {
+  background-color: #2196f3;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 20;
+}
+
+.greyblock {
+  background-color: lightgrey;
+}
+
+.reviewdiv {
+  color: #2196f3;
+}
+
+.paragraph {
+  color: black;
+}
+
+.orangebar {
+  background-color: orange;
+  color: white;
+}
