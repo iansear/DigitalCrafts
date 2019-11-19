@@ -32,7 +32,19 @@
 
 .greybox {
   background-color: lightgray;
+  position: relative;
   margin: 10;
   display: inline-block;
   padding: 30px;
+  height: 150px;
+  width: 150px;
+}
+
+.title {
+  text-align: center;
+}
+
+.articles {
+  bottom: 10px;
+  position: absolute;
 }
