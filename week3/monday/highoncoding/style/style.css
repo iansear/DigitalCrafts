@@ -1,0 +1,40 @@
+.topmenu {
+  background-color: #2196f3;
+  color: white;
+  padding-left: 30px;
+  display: flex;
+}
+.topoption {
+    color: white;
+    padding-top: 30px;
+    padding-left: 60px;
+    text-decoration: none;
+}
+.greyblock {
+  background-color: lightgrey;
+  padding: 10px;
+  margin: 20px;
+}
+
+.review {
+  color: #2196f3;
+  margin: 20px;
+}
+
+.text {
+  color: black;
+}
+
+.orangebar {
+  background-color: orange;
+  color: white;
+}
+
+.greybox {
+  background-color: lightgray;
+  width: 30px;
+  height: 30px;
+  margin: 10;
+  display: inline-block;
+  padding: 30px;
+}

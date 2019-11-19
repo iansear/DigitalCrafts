@@ -1,0 +1,56 @@
+.score {
+  color: white;
+  background-color: black;
+  width: 565;
+  height: 20;
+}
+
+.greybox {
+  width: 565;
+  height: 500;
+  background-color: lightgray;
+  position: relative;
+}
+
+.blackbackground {
+  background-color: black;
+  margin: 20;
+  position: absolute;
+  width: 525;
+  height: 480;
+}
+
+.blackspace {
+  background-color: black;
+  width: 40;
+  height: 20;
+  display: inline-block;
+}
+
+.redbrick {
+  background-color: red;
+  width: 40;
+  height: 20;
+  display: inline-block;
+}
+
+.yellowbrick {
+  background-color: yellow;
+  width: 40;
+  height: 20;
+  display: inline-block;
+}
+
+.greenbrick {
+  background-color: green;
+  width: 40;
+  height: 20;
+  display: inline-block;
+}
+
+.bluebrick {
+  background-color: blue;
+  width: 40;
+  height: 20;
+  display: inline-block;
+}
