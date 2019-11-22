@@ -1,0 +1,181 @@
+//Palindrome or not
+let palindrome = "detartrated"
+let not_palindrome = "nope"
+
+function isPalindrome(word) {
+  let reversed = ""
+  for(let i = word.length - 1; i >= 0 ; i--) {
+    reversed += word[i]
+  }
+  if(reversed == word) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//console.log(isPalindrome(palindrome))
+//console.log(isPalindrome(not_palindrome))
+
+//rtrn t/f is item in array
+let array = [9, 2, 3, 5, 7, 5, 20, 8, 5, 7, -5, 1]
+let istrue = 9
+let isfalse = 4
+
+function is_in_array(temp, array) {
+  let is_in = false
+  for(let i = 0; i < array.length; i++) {
+    if(temp == array[i]) {
+      is_in = true
+    }
+  }
+  return is_in
+}
+
+//console.log(is_in_array(istrue, array))
+//console.log(is_in_array(isfalse, array))
+
+//rm duplicates in array
+function rmDuplicates(array) {
+  uniq_array = []
+  for(let i = 0; i < array.length; i++) {
+    let temp = array[i]
+    let ans = is_in_array(temp, uniq_array)
+    if(ans == false) {
+      uniq_array.push(temp)
+    }
+  }
+  return uniq_array
+}
+
+//console.log(rmDuplicates(array))
+
+//find largest number
+function largest_number(array) {
+  let largest = array[0]
+  for(let i = 0; i < array.length; i++) {
+    if(largest < array[i]) {
+      largest = array[i]
+    }
+  }
+  return largest
+}
+
+//console.log(largest_number(array))
+
+//find smallest number
+function smallest_number(array) {
+  let smallest = array[0]
+  for(let i = 0; i < array.length; i++) {
+    if(smallest > array[i]) {
+      smallest = array[i]
+    }
+  }
+  return smallest
+}
+
+//console.log(smallest_number(array))
+
+//fizzbuzz %3,5
+let num1 = 15
+let num2 = 10
+let num3 = 9
+let num4 = 8
+
+function fizzbuzz(number) {
+  if(number % 3 == 0 && number % 5 == 0) {
+    return "fizzbuzz"
+  } else if(number % 3 == 0) {
+    return "fizz"
+  } else if(number % 5 == 0) {
+    return "buzz"
+  } else {
+    return "none"
+  }
+}
+
+// console.log(fizzbuzz(num1))
+// console.log(fizzbuzz(num2))
+// console.log(fizzbuzz(num3))
+// console.log(fizzbuzz(num4))
+
+//sort desc array
+function rm_from_array(element, array) {
+  for(let i = 0; i < array.length; i++) {
+    if(element == array[i]) {
+      array.splice(i, 1)
+    }
+  }
+}
+
+function sort_desc(array) {
+  desc_array = []
+  let raw_array = array
+  let len = array.length
+  while(raw_array.length > 0) {
+    largest = largest_number(raw_array)
+    desc_array.push(largest)
+    rm_from_array(largest, raw_array)
+  }
+  return desc_array
+}
+
+//console.log(sort_desc(array))
+
+//words in sentence
+let sentence = "this is definitely a sentence with exactly nine words"
+
+function word_count(sentence) {
+  counter = 0
+  if(sentence.length > 0) {
+    counter = 1
+  }
+  for(let i = 0; i < sentence.length; i++) {
+    if(sentence[i] == " ") {
+      counter++
+    }
+  }
+  return counter
+}
+
+//console.log(word_count(sentence))
+
+//vowels in word
+let word = "vowel"
+function vowel_count(word) {
+  counter = 0
+  for(let i = 0; i < word.length; i++) {
+    if(word[i] == 'a' || word[i] == 'e' || word[i] == 'i' || word[i] == 'o' || word[i] == 'u') {
+      counter++
+    }
+  }
+  return counter
+}
+
+//console.log(vowel_count(word))
+
+//time difference
+let start_time = 0
+function time_diff() {
+
+}
+
+//create pyramid
+function get_pyramid(base_num) {
+  let base = base_num
+  let center = (base - 1) / 2
+  let str = ""
+  for(let j = 0; j < center + 1; j++) {
+    str = ""
+    for(let i = 0; i < base; i++) {
+      if(i <= center + j && i >= center - j) {
+        str += "*"
+      } else {
+        str += " "
+      }
+    }
+    console.log(str)
+  }
+}
+
+get_pyramid(51)

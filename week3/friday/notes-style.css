@@ -1,0 +1,20 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.hello {
+  color: red;
+}
+
+.button-standard {
+  background-color: grey;
+  height: 50px;
+  width: 50px;
+  color: white;
+}
+
+/*# sourceMappingURL=notes-style.css.map */

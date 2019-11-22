@@ -1,0 +1,18 @@
+@import "reset";
+
+$newColor: red;
+
+.hello {
+  color: $newColor;
+}
+
+@mixin button-standard($color: black, $height: 50px, $width: 50px) {
+  background-color: $color;
+  height: $height;
+  width: $width;
+}
+
+.button-standard {
+  @include button-standard($color: grey);
+  color: white;
+}
