@@ -1,0 +1,32 @@
+.navbar {
+  background-color: lightblue;
+  margin: 20px;
+  padding: 20px
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.greyblock {
+  background-color: lightgrey;
+  margin: 20px;
+  padding: 20px;
+}
+
+.greyblock button {
+  color: white;
+  background-color: blue;
+  padding: 10px;
+}
+
+.review {
+  background-color: white;
+  margin: 20px
+}
+
+.review h3 {
+  color: lightblue;
+}
