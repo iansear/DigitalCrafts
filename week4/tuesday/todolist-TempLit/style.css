@@ -1,0 +1,46 @@
+body {
+  background-color: lightblue;
+}
+
+#addBlock {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#addBlock input {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#pendBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+#pendBlock ul {
+  background-color: orange;
+  list-style-type: none;
+}
+
+#compBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+#compBlock ul {
+  background-color: green;
+  list-style-type: none;
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+  #addBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

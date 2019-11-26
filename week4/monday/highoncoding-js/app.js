@@ -1,14 +1,10 @@
-//Header
-let header = document.createElement('header')
-let h1 = document.createElement('h1')
-h1.innerHTML = "HighOnCoding"
-header.appendChild(h1)
-document.body.appendChild(header)
-
 //Menu
+let title = document.createElement('h1')
 let homebutton = document.createElement('a')
 let articlebutton = document.createElement('a')
 let navbar = document.createElement('div')
+
+title.innerHTML = "HighOnCoding"
 
 homebutton.innerHTML = "Home"
 homebutton.href = ""
@@ -17,6 +13,7 @@ articlebutton.innerHTML = "Articles"
 articlebutton.href = ""
 
 navbar.className = "navbar"
+navbar.appendChild(title)
 navbar.appendChild(homebutton)
 navbar.appendChild(articlebutton)
 
