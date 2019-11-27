@@ -14,7 +14,7 @@
   margin: 50px;
 }
 
-@media (min-width: 0px) and (max-width: 480px) {
+@media (min-width: 0px) and (max-width: 500px) {
   #menuBar {
     display: flex;
     flex-direction: column;
