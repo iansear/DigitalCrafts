@@ -1,0 +1,20 @@
+#moviesList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#moviesList div {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin: 20px;
+}
+
+#moviesList img {
+  width: 100px;
+}
+
+#movieDetails img {
+  float: left;
+  margin-right: 20px;
+}
