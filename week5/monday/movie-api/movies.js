@@ -28,8 +28,7 @@ function displayDetails(url) {
                               <h3>Rated: ${movie.Rated}</h3>
                               <h3>IMDB Rating: ${movie.imdbRating}</h3>
                               <h3>Released: ${movie.Released}</h3>
-                              <h3>Runtime: ${movie.Runtime}</h3>
-                              `
+                              <h3>Runtime: ${movie.Runtime}</h3>`
   }, url)
 }
 
@@ -46,9 +45,8 @@ function updateList(movies) {
 
 searchButton.addEventListener("click", function() {
   movieDetails.innerHTML = ""
-  let search = searchText.value
-  let searchURL = `http://www.omdbapi.com/?s=${search}&apikey=${apikey}`
+  let url = `http://www.omdbapi.com/?s=${searchText.value}&apikey=${apikey}`
   getInfo((movies) => {
     updateList(movies)
-  }, searchURL)
+  }, url)
 })
