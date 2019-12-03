@@ -33,12 +33,11 @@ searchAll.addEventListener("click", () => {
 searchEmailButton.addEventListener("click", () => {
     let getURL = `http://dc-coffeerun.herokuapp.com/api/coffeeorders/${searchEmail.value}`
     getOrders((orders) => {
-        let order = orders
+        let order = {}
         if(searchEmail.value == "") {
             order = orders
         } else {
-            let key = searchEmail.value
-            order = { key : orders }
+            order.key = orders
         }
         displayOrders(order)
     }, getURL)
@@ -69,14 +68,14 @@ function displayOrders(orders) {
         if(orders[key] != null) {
             orderItems.push(`<li>Email: ${orders[key].emailAddress}</li>
                              <li>Order: ${orders[key].coffee}</li>
-                             <button id="deleteButton" onclick="deleteOrder('${key}')">Delete</button>`)
+                             <button id="deleteButton" onclick="deleteOrder('${orders[key].emailAddress}')">Delete</button>`)
         }
     })
     resultsList.innerHTML = orderItems.join(" ")
 }
 
-function deleteOrder(key) {
-    let url = `http://dc-coffeerun.herokuapp.com/api/coffeeorders/${key}`
+function deleteOrder(email) {
+    let url = `http://dc-coffeerun.herokuapp.com/api/coffeeorders/${email}`
     let request = new XMLHttpRequest()
     request.open("DELETE", url)
     request.send()
