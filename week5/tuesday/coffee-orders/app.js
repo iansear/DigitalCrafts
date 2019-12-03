@@ -67,8 +67,9 @@ function displayOrders(orders) {
     let orderItems = []
     Object.keys(orders).forEach((key) => {
         if(orders[key] != null) {
-            orderItems.push(`<li>Email: ${orders[key].emailAddress} Order: ${orders[key].coffee}
-                <button id="deleteButton" onclick="deleteOrder('${key}')">Delete</button></li>`)
+            orderItems.push(`<li>Email: ${orders[key].emailAddress}</li>
+                             <li>Order: ${orders[key].coffee}</li>
+                             <button id="deleteButton" onclick="deleteOrder('${key}')">Delete</button>`)
         }
     })
     resultsList.innerHTML = orderItems.join(" ")
