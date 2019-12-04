@@ -18,20 +18,21 @@ searchOrderBlock.appendChild(searchEmailButton)
 searchOrderBlock.appendChild(searchAll)
 searchOrderBlock.appendChild(resultsList)
 
+const URL = "http://dc-coffeerun.herokuapp.com/api/coffeeorders/"
+
 orderButton.addEventListener("click", () => {
     let orderString = `{"emailAddress": "${orderEmail.value}", "coffee": "${orderText.value}"}`
     postOrder(orderString)
 })
 
 searchAll.addEventListener("click", () => {
-    const getURL = "http://dc-coffeerun.herokuapp.com/api/coffeeorders/"
     getOrders((orders) => {
         displayOrders(orders)
-    }, getURL)
+    }, URL)
 })
 
 searchEmailButton.addEventListener("click", () => {
-    let getURL = `http://dc-coffeerun.herokuapp.com/api/coffeeorders/${searchEmail.value}`
+       let getURL = URL + searchEmail.value
     getOrders((orders) => {
         let order = {}
         if(searchEmail.value == "") {
@@ -44,9 +45,8 @@ searchEmailButton.addEventListener("click", () => {
 })
 
 function postOrder(orderString) {
-    const postURL = "http://dc-coffeerun.herokuapp.com/api/coffeeorders/"
     let request = new XMLHttpRequest()
-    request.open("POST", postURL)
+    request.open("POST", URL)
     request.setRequestHeader("Content-Type", "application/json")
     request.send(orderString)
 }
@@ -75,8 +75,8 @@ function displayOrders(orders) {
 }
 
 function deleteOrder(email) {
-    let url = `http://dc-coffeerun.herokuapp.com/api/coffeeorders/${email}`
+    let deleteURL = URL + email
     let request = new XMLHttpRequest()
-    request.open("DELETE", url)
+    request.open("DELETE", deleteURL)
     request.send()
 }
