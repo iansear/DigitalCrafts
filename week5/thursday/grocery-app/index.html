@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="addStoreBlock">
+        <form id="addStoreForm">
+        <input id="addStoreText" type="text" placeholder="Add Store" required>
+        <input id="addItemText" type="text" placeholder="Add Item" required>
+        <button id="addStoreButton">Add Item</button>
+        </form>
+    </div>
+    <div id="masterlist">
+    </div>
+<!-- ------------------------------------------------------------------------ -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+   <!-- Firebase Realtime Database Library-->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB5eEbTPpCWkBkRgITmm2E7Hg_SqN4zXlc",
+    authDomain: "todolist-55107.firebaseapp.com",
+    databaseURL: "https://todolist-55107.firebaseio.com",
+    projectId: "todolist-55107",
+    storageBucket: "todolist-55107.appspot.com",
+    messagingSenderId: "429590506172",
+    appId: "1:429590506172:web:692fcde58d96dbf9bebeb9",
+    measurementId: "G-FHB78NJ7FZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</body>
+<script src="app.js"></script>
+</html>
