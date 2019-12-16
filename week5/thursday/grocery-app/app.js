@@ -8,6 +8,8 @@ let addStoreText = document.getElementById("addStoreText")
 let addItemText = document.getElementById("addItemText")
 let addStoreButton = document.getElementById("addStoreButton")
 
+let logoutButton = document.getElementById("logout")
+
 addStoreBlock.appendChild(addStoreForm)
 addStoreForm.appendChild(addStoreText)
 addStoreForm.appendChild(addItemText)
@@ -22,6 +24,21 @@ addStoreButton.addEventListener("click", () => {
         newStore.push({
             item: addItemText.value
         })
+    }
+})
+
+logoutButton.addEventListener("click", () => {
+    firebase.auth().signOut().then(function() {
+    }, function(error) {
+        console.error(error);
+    })
+})
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        console.log("logged in")
+    } else {
+        window.location = "register.html"
     }
 })
 
