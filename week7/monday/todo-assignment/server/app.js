@@ -1,3 +1,4 @@
+const Task = require("./task")
 const express = require("express")
 const cors = require("cors")
 const app = express()
@@ -16,13 +17,8 @@ app.get("/todo", (req, res) => {
 })
 
 app.post("/todo", (req, res) => {
-    let newTask = {
-        "title": req.body.title, 
-        "priority": req.body.priority,
-        "dateCreated": req.body.dateCreated,
-        "dateCompleted": req.body.dateCompleted,
-        "isCompleted": req.body.isCompleted
-    }
+    let newTask = new Task(req.body.title, req.body.priority, 
+        req.body.dateCreated, req.body.dateCompleted, req.body.isCompleted)
     todo.push(newTask)
     res.json(newTask)
 })

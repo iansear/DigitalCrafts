@@ -7,7 +7,7 @@ let taskButton = document.getElementById("taskButton")
 
 taskButton.addEventListener("click", () => {
     let date = Date.now()
-    let task =  new Task(taskName.value, taskPriority.value, date, "", false)
+    let task =  new Task(taskName.value, taskPriority.value, date, null, false)
     addTask(task)
 })
 
@@ -28,12 +28,20 @@ async function addTask(task) {
       getTasks()
 }
 
+async function deleteTask(task) {
+    await fetch(url+"/"+task, {
+        method: 'DELETE',
+      })
+      getTasks()
+}
+
 function displayTasks(tasks) {
     let taskUL = []
-    tasks.results.forEach((val) => {
-        let timestamp = new Date(val.dateCreated)
+    tasks.results.forEach((task) => {
+        let timestamp = new Date(task.dateCreated)
         let date = `${timestamp}`
-        taskUL.push(`<li>${val.title} Priority: ${val.priority} Created: ${date}</li>`)
+        taskUL.push(`<li>${task.title} Priority: ${task.priority} Created: ${date}
+            <button onclick="deleteTask('${task}')">Delete</button></li>`)
     })
     taskList.innerHTML = taskUL.join(" ")
 }

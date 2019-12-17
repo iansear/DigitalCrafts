@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+
+<form method="POST" action="/trips">
+    <input name="title" type="text" placeholder="City"/>
+    <input name="departDate" type="text" placeholder="Depart Date"/>
+    <input name="returnDate" type="text" placeholder="Return Date"/>
+    <button type="submit">Save</button>
+</form>
+
+{{#mytrips}}
+<form method="POST" action="/rm-trips">
+    <h1>Travel to {{title}}</h1>
+    <h2>From: {{departDate}}</h2>
+    <h2>Till: {{returnDate}}</h2>
+    <input name="rm" type="hidden" value="{{title}}"/>
+    <button type="submit">Remove Trip</button>
+</form>
+{{/mytrips}}
+
+</body>
+</html>
