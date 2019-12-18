@@ -1,0 +1,26 @@
+<html>
+
+<header>
+</header>
+
+<body>
+{{> menu}}
+<h2>{{user}}</h2>
+<h2>Movies</h2>
+
+{{#movies}}
+
+<form method="POST" action="/movies/delete">
+<h1>{{title}}</h1>
+<img src="{{posterURL}}" width="100" height="100" alt="Image Not Found">
+<h3>{{genre}}</h3>
+<p>{{description}}</p>
+<input name="deleteMovie" type="hidden" value="{{title}}"/>
+<button type="submit">Remove Movie</button>
+</form>
+
+{{/movies}}
+
+</body>
+
+</html>

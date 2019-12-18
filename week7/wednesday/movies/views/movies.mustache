@@ -1,0 +1,29 @@
+<html>
+
+<header>
+</header>
+
+<body>
+{{> menu}}
+<h2>{{user}}</h2>
+<h2>Movies</h2>
+
+<form method="POST" action="/movies/create">
+    <input name="title" type="text" placeholder="Movie Title"/>
+    <input name="description" type="text" placeholder="Description"/>
+    <input name="genre" type="text" placeholder="Movie Genre"/>
+    <input name="posterURL" type="text" placeholder="Picture URL"/>
+    <button type="submit">Add Movie</button>
+</form>
+
+
+
+{{#movies}}
+
+    <a href="/movies/{{title}}"><h1>{{title}}</h1></a>
+
+{{/movies}}
+
+</body>
+
+</html>

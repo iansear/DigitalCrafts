@@ -1,0 +1,19 @@
+<html>
+
+<header>
+</header>
+
+<body>
+{{> menu}}
+<h2>{{user}}</h2>
+<h2>Movies</h2>
+
+{{#movies}}
+
+    <a href="/movies/{{title}}"><h1>{{title}}</h1></a>
+
+{{/movies}}
+
+</body>
+
+</html>

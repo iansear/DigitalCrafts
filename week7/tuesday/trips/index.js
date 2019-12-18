@@ -2,6 +2,8 @@ const express = require("express")
 const app = express()
 const mustacheExpress = require("mustache-express")
 const Trip = require("./models/trip")
+// const tripRouter = require("./routes/trips")
+// app.use("/trips", tripRouter)
 app.use(express.urlencoded())
 
 app.engine("mustache", mustacheExpress())
@@ -22,11 +24,7 @@ app.post("/trips", (req, res) => {
 
 app.post("/rm-trips", (req, res) => {
     let tripID = req.body.rm
-    let filteredTrips = trips.filter((trip) => {
-        if(trip.title != tripID) {
-            return trip
-        }
-    })
+    let filteredTrips = trips.filter((trip) => trip.title != tripID)
     trips = filteredTrips
     res.redirect("/trips")
 })
