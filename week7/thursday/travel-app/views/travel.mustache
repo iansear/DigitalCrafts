@@ -1,0 +1,27 @@
+<html>
+
+<header></header>
+
+<body>
+{{> menu}}
+{{> signout}}
+<h2>Welcome {{user}}</h2>
+
+<form method="POST" action="/travel/addTrip">
+    <input name="title" type="text" placeholder="Destination"/>
+    <input name="image" type="text" placeholder="Image"/>
+    <input name="departDate" type="text" placeholder="Departure Date"/>
+    <input name="returnDate" type="text" placeholder="Return Date"/>
+    <button>Add Trip</button>
+</form>
+
+{{#trips}}
+    {{title}}
+{{/trips}}
+{{^trips}}
+    <h3>No travel plans.</h3>
+{{/trips}}
+
+</body>
+
+</html>
