@@ -1,0 +1,19 @@
+<html>
+<body>
+    <h1>BlogDB App</h1>
+
+    <form method="POST" action="/posts">
+        <input name="title" type="text" placeholder="Post Title"/></br>
+        <textarea name="body" rows="4" cols="50"></textarea></br>
+        <button>Save</button>
+    </form>
+
+    {{#posts}}
+        <a href="/posts/{{post_id}}"><p>{{post_id}}</p></a>
+        <b>{{title}}</b>
+        <p>{{body}}</p>
+
+    {{/posts}}
+
+</body>
+</html>
