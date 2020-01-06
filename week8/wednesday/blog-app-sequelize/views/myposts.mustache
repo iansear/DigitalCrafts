@@ -1,0 +1,41 @@
+<html>
+<body>
+    <h1>BlogDB App</h1>
+
+    <form method="POST" action="/myposts">
+        <input name="title" type="text" placeholder="Post Title"/></br>
+        <textarea name="body" rows="4" cols="50"></textarea></br>
+        <select name="category">
+            <option value="tangential_rant">Tangential Rant</option>
+            <option value="this">This</option>
+            <option value="that">That</option>
+            <option value="other">Other</option>
+        </select></br>
+        <button>Save</button>
+    </form>
+    
+    <h3>Select Category</h3>
+    <form method="POST" action="/myposts/category">
+        <select name="category">
+            <option value="all">All</option>
+            <option value="tangential_rant">Tangential Rant</option>
+            <option value="this">This</option>
+            <option value="that">That</option>
+            <option value="other">Other</option>
+        </select></br>
+        <button>Search</button>
+    </form>
+
+    {{#posts}}
+        <a href="/myposts/mypost/{{id}}"><p>{{id}}</p></a>
+        <b>{{title}}</b>
+        <p>{{body}}</p>
+        <p>{{category}}</p>
+    {{/posts}}
+
+    {{^posts}}
+    <h3>No Posts</h3>
+    {{/posts}}
+
+</body>
+</html>

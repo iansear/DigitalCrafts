@@ -1,0 +1,29 @@
+<html>
+<body>
+    <h1>BlogDB App</h1>
+
+    {{#post}}
+        <form method="POST" action="/myposts/myposts-delete">
+            <input name="id" type="hidden" value="{{id}}"/>
+            <button>Delete Post</button>
+        </form>
+        <p>{{id}}</p>
+        <b>{{title}}</b>
+        <p>{{body}}</p>
+        <p>{{category}}</p>
+        <form method="POST" action="/myposts/myposts-update">
+            <input name="id" type="hidden" value="{{id}}"/>
+            <input name="title" type="text" value="{{title}}"/></br>
+            <textarea name="body" rows="4" cols="50">{{body}}</textarea></br>
+            <select name="category">
+                <option value="tangential_rant">Tangential Rant</option>
+                <option value="this">This</option>
+                <option value="that">That</option>
+                <option value="other">Other</option>
+            </select></br>
+            <button>Update Post</button>
+        </form>
+    {{/post}}
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+    <h1>BlogDB App</h1>
+
+    {{#post}}
+        <p>{{post_id}}</p>
+        <form method="POST" action="/posts/posts-delete">
+            <input name="post_id" type="hidden" value="{{post_id}}"/>
+            <button>Delete Post</button>
+        </form>
+        <b>{{title}}</b>
+        <p>{{body}}</p>
+        <form method="POST" action="/posts/posts-update">
+            <input name="post_id" type="hidden" value="{{post_id}}"/>
+            <input name="title" type="text" value="{{title}}"/></br>
+            <textarea name="body" rows="4" cols="50">{{body}}</textarea></br>
+            <button>Update Post</button>
+        </form>
+
+    {{/post}}
+
+</body>
+</html>
