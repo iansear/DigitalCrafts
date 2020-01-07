@@ -3,7 +3,7 @@
     <h1>BlogDB App</h1>
 
     {{#post}}
-        <form method="POST" action="/myposts/myposts-delete">
+        <form method="POST" action="/posts/mypost-delete">
             <input name="id" type="hidden" value="{{id}}"/>
             <button>Delete Post</button>
         </form>
@@ -11,7 +11,7 @@
         <b>{{title}}</b>
         <p>{{body}}</p>
         <p>{{category}}</p>
-        <form method="POST" action="/myposts/myposts-update">
+        <form method="POST" action="/posts/mypost-update">
             <input name="id" type="hidden" value="{{id}}"/>
             <input name="title" type="text" value="{{title}}"/></br>
             <textarea name="body" rows="4" cols="50">{{body}}</textarea></br>
@@ -23,6 +23,15 @@
             </select></br>
             <button>Update Post</button>
         </form>
+        {{#comments}}
+            <p>{{id}}</p>
+            <p>{{comment}}</p>
+            <form method="POST" action="/posts/delete-comment">
+                <input name="id" type="hidden" value="{{id}}"/>
+                <input name="postid" type="hidden" value="{{post.id}}"/>
+                <button>Delete</button>
+            </form>
+        {{/comments}}
     {{/post}}
 
 </body>

@@ -4,7 +4,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
 
     return queryInterface.addColumn('Posts','isPublished',{
-      type: Sequelize.STRING
+      type: Sequelize.BOOLEAN
     })
 
     /*

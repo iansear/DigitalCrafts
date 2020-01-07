@@ -1,0 +1,21 @@
+<html>
+<body>
+    <h1>BlogDB App</h1>
+    {{>menu}}
+    <h2>{{username}}</h2>
+    
+    {{>category}}
+
+    {{#posts}}
+        <a href="/posts/post/{{id}}"><p>{{id}}</p></a>
+        <b>{{title}}</b>
+        <p>{{body}}</p>
+        <p>{{category}}</p>
+    {{/posts}}
+
+    {{^posts}}
+    <h3>No Posts</h3>
+    {{/posts}}
+
+</body>
+</html>

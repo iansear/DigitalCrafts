@@ -1,0 +1,22 @@
+<html>
+<body>
+    <h1>BlogDB App</h1>
+
+    {{#post }}
+        <p>{{id}}</p>
+        <b>{{title}}</b>
+        <p>{{body}}</p>
+        <p>{{category}}</p>
+        <form method="POST" action="/posts/post-comment">
+            <input name="postid" type="hidden" value="{{id}}"/>
+            <textarea name="comment" rows="4" cols="50"></textarea></br>
+        <button>Save</button>
+        </form>
+        {{#comments}}
+            <p>{{id}}</p>
+            <p>{{comment}}</p>
+        {{/comments}}
+    {{/post}}
+
+</body>
+</html>
