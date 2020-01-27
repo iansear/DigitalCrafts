@@ -1,0 +1,32 @@
+.header {
+  background-color: blue;
+  flex-direction: row;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.greyblock {
+  background-color: lightgrey;
+  margin: 30px;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+}
+
+.stepper button {
+  height: 30px;
+}
+
+.article {
+  margin: 30px;
+}
+
+.commentsbar {
+  color: white;
+  display: flex;
+  background-color: orange;
+  justify-content: space-around;
+}
