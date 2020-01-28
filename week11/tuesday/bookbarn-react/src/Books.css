@@ -5,7 +5,12 @@
 }
 
 .book {
-    height: 200px;
+    height: 400px;
     width: 200px;
     margin-right: 20px;
+}
+
+.book img {
+    width: 160px;
+    margin: 20px;
 }

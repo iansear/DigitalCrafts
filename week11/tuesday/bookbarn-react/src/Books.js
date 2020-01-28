@@ -7,7 +7,6 @@ class Books extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            searchText: [],
             books: [],
             selectedBooks: [],
             languages: []
@@ -44,8 +43,17 @@ class Books extends Component {
     }
 
     booksByTitle = (title) => {
+        let filteredBooks = this.state.books.filter((book) => {
+            if(title.target.value === '') {
+                return book
+            } else if(book.title.toLowerCase().includes(title.target.value.toLowerCase())) {
+                return book
+            } else {
+                return null
+            }
+        })
         this.setState({
-            searchText: title.target.value
+            selectedBooks: filteredBooks
         })
     }
 
