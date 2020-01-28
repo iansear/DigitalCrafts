@@ -1,0 +1,11 @@
+.booklist {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.book {
+    height: 200px;
+    width: 200px;
+    margin-right: 20px;
+}
